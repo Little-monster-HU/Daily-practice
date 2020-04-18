@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{123B9ED0-1D31-4D6D-83A0-ED5566C87396}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>回文判断</RootNamespace>
+    <AssemblyName>回文判断</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="PythonTools.html" />
+    <Content Include="vslogo.png" />
+  </ItemGroup>
+</Project>
