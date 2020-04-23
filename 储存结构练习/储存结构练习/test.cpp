@@ -55,3 +55,24 @@ int check_Capacity(SeqList ps)
 	}
 	return 0;
 }
+void SeqListDestroy(SeqList ps)
+{
+	assert(ps);
+	free(ps->_array);
+	ps->_array = NULL;
+	ps->_size = 0;
+	ps->_capacity = 0;
+}
+
+// Î²²å 
+void SeqListPushBack(SeqList ps, DataType data)
+{
+	assert(ps);
+	SeqListInsert(ps, ps->_size, data);
+}
+// Î²É¾ 
+void SeqListPopBack(SeqList ps)
+{
+	assert(ps);
+	SeqListErase(ps, ps->_size - 1);
+}
