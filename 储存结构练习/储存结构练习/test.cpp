@@ -76,3 +76,152 @@ void SeqListPopBack(SeqList ps)
 	assert(ps);
 	SeqListErase(ps, ps->_size - 1);
 }
+// 头插 
+void SeqListPushFront(PSeqList ps, DataType data)
+{
+	assert(ps);
+	SeqListInsert(ps, 0, data);
+}
+// 头删 
+void SeqListPopFront(PSeqList ps)
+{
+	assert(ps);
+	SeqListErase(ps, 0);
+}
+
+// 任意位置插入 
+void SeqListInsert(PSeqList ps, int pos, DataType data)
+{
+	int i = 0;
+	assert(ps);
+	if (check_Capacity(ps) >= 0)
+	{
+		if (pos<0 && (pos>ps->_size))
+		{
+			printf("此位置非法，无法插入！\n");
+			return;
+		}
+		else
+		{
+			for (i = ps->_size; i >= pos; i--)
+			{
+				ps->_array[i] = ps->_array[i - 1];
+			}
+			ps->_array[pos] = data;
+			ps->_size++;
+		}
+
+	}
+}
+
+// 任意位置删除 
+void SeqListErase(PSeqList ps, int pos)
+{
+	int i = 0;
+	assert(ps);
+	if (pos<0 && pos >= ps->_size)
+	{
+		printf("这个位置没有元素，无法删除！\n");
+		return;
+	}
+	if (ps->_size == 0)
+	{
+		printf("没有元素可以删除！\n");
+		return;
+	}
+	for (i = pos; i<ps->_size - 1; i++)
+	{
+		ps->_array[i] = ps->_array[i + 1];
+	}
+	ps->_size--;
+
+}
+
+// 检测data是否放在顺序表中 
+int SeqListFind(PSeqList ps, DataType data)
+{
+	int i = 0;
+	assert(ps);
+	for (i = 0; i<ps->_size; i++)
+	{
+		if (ps->_array[i] == data)
+			return i;
+	}
+	return -1;
+}
+
+// 移除顺序表中第一个值为data的元素 
+void SeqListRemove(PSeqList ps, DataType data)
+{
+	int i = 0;
+	assert(ps);
+	for (i = 0; i<ps->_size; i++)
+	{
+		if (ps->_array[i] == data)
+		{
+			SeqListErase(ps, i);
+			return;
+		}
+	}
+}
+
+// 移除顺序表中所有值为data的元素 
+void SeqListRemoveAll(PSeqList ps, DataType data)
+{
+	int i = 0;
+	assert(ps);
+	for (i = 0; i<ps->_size; i++)
+	{
+		if (ps->_array[i] == data)
+		{
+			SeqListErase(ps, i);
+		}
+	}
+	return;
+}
+
+// 获取顺序表有效元素个数 
+int SeqListSize(PSeqList ps)
+{
+	assert(ps);
+	return ps->_size;
+}
+
+// 获取顺序表的容量 
+int SeqListCapacity(PSeqList ps)
+{
+	assert(ps);
+	return ps->_capacity;
+}
+
+// 检测顺序表是否为空 
+int SeqListEmpty(PSeqList ps)
+{
+	assert(ps);
+	return ps->_size;
+}
+
+// 获取顺序表中第一个元素 
+DataType SeqListFront(PSeqList ps)
+{
+	assert(ps);
+	return ps->_array[0];
+}
+
+// 获取顺序表中最后一个元素 
+DataType SeqListBack(PSeqList ps)
+{
+	assert(ps);
+	return ps->_array[ps->_size - 1];
+}
+
+void PrintSeqList(PSeqList ps)
+{
+	int i = 0;
+	assert(ps);
+	for (i = 0; i<ps->_size; i++)
+	{
+		printf("%d ", ps->_array[i]);
+	}
+	printf("\n");
+}
