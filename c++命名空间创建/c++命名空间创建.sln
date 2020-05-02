@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "c++命名空间创建", "c++命名空间创建\c++命名空间创建.vcxproj", "{E5A02ECB-120F-4106-A430-2F71ABCDEDAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5A02ECB-120F-4106-A430-2F71ABCDEDAA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E5A02ECB-120F-4106-A430-2F71ABCDEDAA}.Debug|Win32.Build.0 = Debug|Win32
+		{E5A02ECB-120F-4106-A430-2F71ABCDEDAA}.Release|Win32.ActiveCfg = Release|Win32
+		{E5A02ECB-120F-4106-A430-2F71ABCDEDAA}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
